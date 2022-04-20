@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'app1',
 
     # third party 
-    "django_celery_beat"
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -126,4 +126,4 @@ STATIC_ROOT=Path(BASE_DIR,'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL=os.environ['celery_broker_url']
+CELERY_BROKER_URL=os.environ.get('REDIS_URL')
